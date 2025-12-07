@@ -1,0 +1,12 @@
+# Gravitational Botnet Detector Dependencies
+
+# Core scientific computing
+numpy>=1.21.0,<2.0.0
+pandas>=1.3.0,<3.0.0
+
+# Configuration
+PyYAML>=5.4.0,<7.0.0
+
+# Optional: For visualization (not required for core functionality)
+# matplotlib>=3.4.0,<4.0.0
+# seaborn>=0.11.0,<1.0.0
