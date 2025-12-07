@@ -10,6 +10,7 @@ This demonstrates:
 
 import sys
 from pathlib import Path
+import numpy as np
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
@@ -72,7 +73,6 @@ def demo_custom_config():
     print(f"  - Clusters formed: {n_clusters}")
     
     # Show top 5 anomaly scores
-    import numpy as np
     top_indices = np.argsort(results['anomaly_scores'])[-5:][::-1]
     print(f"\nTop 5 anomaly scores:")
     for idx in top_indices:
@@ -127,7 +127,6 @@ def demo_analysis():
     results = detector.detect_from_csv('data/sample_telemetry.csv')
     
     # Analyze cluster sizes
-    import numpy as np
     clusters = results['clusters']
     unique_clusters, counts = np.unique(clusters, return_counts=True)
     
@@ -157,7 +156,6 @@ def demo_analysis():
 
 
 if __name__ == '__main__':
-    import numpy as np
     
     print("\n" + "=" * 70)
     print("GRAVITATIONAL BOTNET DETECTOR - API DEMO")

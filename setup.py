@@ -42,11 +42,10 @@ setup(
         "pandas>=1.3.0,<3.0.0",
         "PyYAML>=5.4.0,<7.0.0",
     ],
-    entry_points={
-        "console_scripts": [
-            "gravitational-detector=main:main",
-        ],
-    },
+    # Note: CLI is provided via main.py in the root directory
+    # Users can run: python main.py --input data.csv
+    # For package installation as a command-line tool, main.py would need to be
+    # moved into the package or a wrapper script created
     include_package_data=True,
     zip_safe=False,
 )
