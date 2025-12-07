@@ -1,0 +1,16 @@
+detector:
+  time_window_sec: 60
+features:
+  selection:
+    - total_bytes
+    - total_packets
+    - unique_dest_ips
+    - port_entropy
+clustering:
+  algorithm: DBSCAN
+  params:
+    eps: 0.5
+    min_samples: 10
+alerting:
+  bas_threshold: 0.85
+  output_format: json
