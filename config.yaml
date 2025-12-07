@@ -1,0 +1,40 @@
+# Gravitational Botnet Detector Configuration
+
+# Anomaly detection threshold (0-1)
+# Higher values = stricter detection (fewer false positives)
+# Lower values = more sensitive detection (more potential anomalies)
+anomaly_threshold: 0.7
+
+# Weight for cluster size in anomaly scoring
+cluster_size_weight: 0.3
+
+# Feature extraction settings
+features:
+  # Add feature-specific settings here if needed
+  normalize: true
+
+# Gravitational simulation parameters
+gravity:
+  # Gravitational constant (controls force strength)
+  gravitational_constant: 1.0
+  
+  # Number of simulation iterations
+  iterations: 50
+  
+  # Time step for integration
+  time_step: 0.1
+  
+  # Damping factor (0-1) for velocity
+  damping: 0.9
+  
+  # Minimum distance to prevent singularities
+  min_distance: 0.1
+  
+  # Distance threshold for cluster assignment
+  # If null, will be computed adaptively
+  distance_threshold: null
+
+# Logging settings
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
